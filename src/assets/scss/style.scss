@@ -1,0 +1,114 @@
+@import "mixins";
+@import "reset";
+@import "fonts";
+@import "vars";
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f9c5d1;
+    background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
+}
+
+.main {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 2em;
+}
+
+.title {
+    text-align: center;
+}
+
+.content {
+    margin-top: 2rem;
+    display: flex;
+}
+
+// calc
+.calculator {
+    margin-right: 6rem;
+    &__item {
+        margin-bottom: 1rem;
+        overflow: hidden;
+        
+    }
+
+    &__input {
+        width: 200px;
+        padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+        border: none;
+        border-radius: 0.3rem;
+        background-color: darken(#fff, 5);
+        outline: none;
+        border-bottom: 3px solid gray;
+        transition: border-bottom 0.3s;
+
+        &:not(:placeholder-shown) {
+            border-bottom: 3px solid #6b7afd;
+        }
+    }
+
+    &__result {
+        width: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &__btn {
+        padding: 0.8em 1.8em;
+        display: block;
+        margin: 0 auto;
+        color: #fff;
+        background-color: #6b7afd;
+        border-radius: 0.3rem;
+        text-transform: uppercase;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: darken(#6b7afd, 8);
+        }
+    }
+}
+
+
+//res
+.result {
+    text-align: center;
+    font-weight: 700;
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+        padding: 1rem;
+        border-radius: 0.6rem;
+        border: 2px solid #000;
+        transition: background-color cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+
+        &.active {
+            background-color: #6b7afd;
+        }
+    }
+}

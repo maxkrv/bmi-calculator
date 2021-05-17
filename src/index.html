@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="page">
+        <main class="main">
+            <h1 class="title">Body Mass Index</h1>
+
+            <div class="content">
+                <form class="calculator" id="form">
+                    <div class="calculator__item">
+                        <input type="number" class="calculator__input" id="height" placeholder="Enter your height(cm)" required>
+                    </div>
+                    <div class="calculator__item">
+                        <input type="number" class="calculator__input" id="weight" placeholder="Enter your weight(kg)" required>
+                    </div>
+                    <div class="calculator__item">
+                        <div class="calculator__result">
+                            Your BMI: <span id="result"></span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="calculator__btn btn-reset">result</button>
+                </form>
+
+                <div class="result" id="result__table">
+                    <div class="result__item" id="below">16.00 - 18.49 Underweight</div>
+                    <div class="result__item" id="normal">18.50 - 24.99 Normal</div>
+                    <div class="result__item" id="Overweight">25.00 - 29.99 Overweight</div>
+                    <div class="result__item" id="Obesity1">30.00 - 34.99 Obesity of the I degree</div>
+                    <div class="result__item" id="Obesity2">35.00 - 39.99 Obesity of the II degree </div>
+                    <div class="result__item" id="Obesity3">40.00+ Obesity of the III degree</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/assets/js/script.min.js"></script>
+</body>
+</html>
