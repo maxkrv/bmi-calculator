@@ -9,7 +9,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
         return Number(formula.toFixed(2));
     }
 
-    console.log(bmi);
+    console.log(bmi());
     document.getElementById("result").innerHTML = bmi();
 
     document.getElementById("below").classList.remove("active");
