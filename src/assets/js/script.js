@@ -12,12 +12,9 @@ document.getElementById("form").addEventListener("submit", function (event) {
     console.log(bmi());
     document.getElementById("result").innerHTML = bmi();
 
-    document.getElementById("below").classList.remove("active");
-    document.getElementById("normal").classList.remove("active");
-    document.getElementById("Overweight").classList.remove("active");
-    document.getElementById("Obesity1").classList.remove("active");
-    document.getElementById("Obesity2").classList.remove("active");
-    document.getElementById("Obesity3").classList.remove("active");
+    document.querySelectorAll(".result .active").forEach((element) => {
+        element.classList.remove("active");
+    });
 
     if (bmi() <= 18.49) {
         document.getElementById("below").classList.add("active");
